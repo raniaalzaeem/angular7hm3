@@ -7,16 +7,19 @@
     <table>
       <thead>
           <tr>
-              <td width="20%"> # </td>
-              <td width="20%"> id </td>
+              <td width="10%"> # </td>
+              <td width="10%"> id </td>
               <td width="60%"> title </td>
+              <td width="10%">  </td>
+
           </tr>
       </thead>
       <tbody>
           <tr *ngFor="let data of departments,index as i" (click)="selecteddepartment(data)">
-              <td width="20%"> {{i}} </td>
-              <td width="20%"> {{data.id}} </td>
+              <td width="10%"> {{i}} </td>
+              <td width="10%"> {{data.id}} </td>
               <td width="60%"> {{data.title}} </td>
+              <td width="10%"> <a href="http://localhost:4200/departmentdetails/{{data.id}}">go</a> </td>
           </tr>
       </tbody>
     </table>
