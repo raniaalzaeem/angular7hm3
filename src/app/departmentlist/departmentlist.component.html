@@ -1,0 +1,24 @@
+<h2>
+  Departments List 
+</h2>
+
+<div>
+
+    <table>
+      <thead>
+          <tr>
+              <td width="20%"> # </td>
+              <td width="20%"> id </td>
+              <td width="60%"> title </td>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let data of departments,index as i" (click)="selecteddepartment(data)">
+              <td width="20%"> {{i}} </td>
+              <td width="20%"> {{data.id}} </td>
+              <td width="60%"> {{data.title}} </td>
+          </tr>
+      </tbody>
+    </table>
+
+</div>
